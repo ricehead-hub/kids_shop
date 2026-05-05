@@ -1,0 +1,383 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+}
+
+/* 🔝 HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 20px;
+  gap: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* 🔍 ПОИСК */
+.search input {
+  width: 280px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.search input:focus {
+  border-color: #a5b4fc;
+}
+
+/* 🔗 НАВИГАЦИЯ */
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  width: 100px;               /* одинаковый размер */
+  text-align: center;
+
+  padding: 10px;
+  border-radius: 10px;
+
+  text-decoration: none;
+  color: #333;
+
+  background: #eef2ff;
+
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: #c7d2fe;
+}
+
+.nav-btn:active {
+  background: #a5b4fc;
+}
+
+.nav-btn.admin {
+  background: #ffe4e6;
+}
+
+.nav-btn.admin:hover {
+  background: #fecdd3;
+}
+
+/* 📦 КОНТЕНТ */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* 📱 АДАПТИВ */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* 🔍 поиск с кнопкой */
+.search {
+  display: flex;
+  align-items: center;
+
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden; /* 💥 ключевая строка */
+}
+
+/* input */
+.search input {
+  border: none;
+  padding: 10px 12px;
+  width: 260px;
+  outline: none;
+}
+
+/* кнопка */
+.search-btn {
+  border: none;
+  padding: 10px 14px;
+  background: #eef2ff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.search-btn:hover {
+  background: #c7d2fe;
+}
+
+/* 🛒 CART */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.cart-controls button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-controls button:hover {
+  background: #ddd;
+}
+
+.cart-right {
+  text-align: right;
+}
+
+.cart-total {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
+
+/* ⚙️ ADMIN FORM */
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-form input,
+.admin-form select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+/* 📌 PAGE */
+.admin-page {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* 🧾 FORM */
+.admin-form {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* inputs */
+.admin-form input,
+.admin-form select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+/* 📦 GRID */
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* 🧱 CARD */
+.product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 10px;
+}
+
+/* 🔘 BUTTONS */
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f2f2f2;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #e6e6e6;
+}
+
+.btn.primary {
+  background: black;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #333;
+}
+
+.btn.danger {
+  background: #ffe4e6;
+}
+
+.btn.danger:hover {
+  background: #fecdd3;
+}
+
+/* 📌 ACTIONS */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 🔐 AUTH PAGE */
+.auth-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f6f7fb;
+}
+
+/* 🪟 ОКНО */
+.auth-box {
+  width: 420px;
+  padding: 30px;
+
+  background: white;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.auth-box h2 {
+  margin: 0;
+  text-align: center;
+}
+
+/* INPUT */
+.auth-box input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+/* BUTTON */
+.auth-box .btn {
+  margin-top: 10px;
+}
+
+/* SWITCH TEXT */
+.auth-switch {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.auth-switch:hover {
+  color: #000;
+}

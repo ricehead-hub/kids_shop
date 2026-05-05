@@ -1,0 +1,97 @@
+/* 📦 страница */
+.page {
+  padding: 20px;
+}
+
+/* 🔍 фильтры */
+.filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+/* 🧱 сетка как WB */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* 🧸 карточка */
+.product-card {
+  width: 100%;
+  height: 320px;
+
+  background: white;
+  border-radius: 16px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+  transition: 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+/* 🖼 картинка */
+.product-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ℹ️ инфо */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+/* 🔘 кнопка как WB */
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background: #a5b4fc;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #818cf8;
+}
+
+.btn:active {
+  background: #6366f1;
+  transform: scale(0.98);
+}
+
+/* 📱 адаптив */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card {
+    height: 280px;
+  }
+}

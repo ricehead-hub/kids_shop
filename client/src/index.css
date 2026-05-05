@@ -1,0 +1,17 @@
+body {
+  font-family: Arial;
+  background: #fdfcff;
+  margin: 0;
+}
+
+button {
+  background: #d9c7ff;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c3a9ff;
+}
