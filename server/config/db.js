@@ -1,9 +1,8 @@
-// server/config/db.js
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/kidsshop'); // без useNewUrlParser и useUnifiedTopology
+    await mongoose.connect(process.env.MONGO_URI);
     console.log('MongoDB подключена ✅');
   } catch (error) {
     console.error('Ошибка подключения к MongoDB:', error.message);

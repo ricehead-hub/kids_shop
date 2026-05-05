@@ -1,3 +1,4 @@
+require("dotenv").config();
 console.log("🔥 SERVER STARTED");
 
 const express = require("express");
@@ -12,8 +13,6 @@ connectDB();
 
 app.use(cors());
 app.use(express.json());
-
-// 💥 важно для фронта
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/products", productRoutes);
@@ -22,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("OK");
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("Server running on", PORT);
 });
