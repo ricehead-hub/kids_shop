@@ -6,8 +6,10 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 
 const productRoutes = require("./routes/products");
+const authRoutes = require("./routes/auth");
 
 console.log("✅ productRoutes загружены", typeof productRoutes);
+console.log("✅ authRoutes загружены", typeof authRoutes);
 console.log("✅ Модули подключены");
 
 const app = express();
@@ -22,6 +24,7 @@ const startServer = async () => {
 
     console.log("✅ Регистрирую маршрут /api/products");
     app.use("/api/products", productRoutes);
+    app.use("/api/auth", authRoutes);
     app.get("/", (req, res) => {
       res.send("OK");
     });
